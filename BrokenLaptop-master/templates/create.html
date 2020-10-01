@@ -1,14 +1,20 @@
+<title> Add broken laptop </title>
+
 New Broken Laptop
 <form method="POST" action="/create">
 <input name="brand" type="text">
 <input name="price" type="text">
 <input type="submit" value="Add">
+<a href="/"> Click me to go back </a>
 </form>
 
 <table border=1>
 <tr>
 <td>ID</td><td>Brand</td><td>Price</td>
 </tr>
+
+Current list of broken laptops
+
 {% for brokenlaptop in brokenlaptops %}
 	<tr>
 		<td>{{ brokenlaptop.id }}</td>
